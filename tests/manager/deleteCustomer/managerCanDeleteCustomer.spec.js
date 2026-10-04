@@ -36,7 +36,7 @@ test('Assert manager can delete customer', async ({ page }) => {
     const customersListPage = new CustomersListPage(page);
 
     await customersListPage.open();
-    await customersListPage.clickDeleteCustomerBtn(firstName);
+    await customersListPage.clickDeleteCustomerBtn(firstName, lastName,  postCode);
     await customersListPage.customerRowIsNotPresent(firstName, lastName, postCode);
 
     await page.reload();
